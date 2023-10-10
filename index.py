@@ -15,7 +15,6 @@ import re
 
 form_class, _ = loadUiType(os.path.join(os.path.dirname(__file__), 'mainPage.ui'))
 
-# init ui file
 class Download_worker_1(QThread):
     update_progress_1 = pyqtSignal(int)  # for current value
     success = pyqtSignal()
@@ -115,6 +114,7 @@ class Download_worker_3(QThread):
         self.update_progress_3.emit(int(progress))
 
 
+# init ui file
 class MainApp(QMainWindow, form_class):
     def __init__(self, parent=None):
         super(MainApp, self).__init__(parent)
