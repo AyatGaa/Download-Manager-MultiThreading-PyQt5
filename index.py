@@ -123,7 +123,7 @@ class MainApp(QMainWindow, form_class):
         self.handel_ui()
         self.handel_Buttons()
         icon = QIcon()
-        icon.addPixmap(QPixmap("download.png"), QIcon.Normal, QIcon.Off)
+        icon.addPixmap(QPixmap("Download.png"), QIcon.Normal, QIcon.Off)
         self.setWindowIcon(icon)
 
     def handel_ui(self):

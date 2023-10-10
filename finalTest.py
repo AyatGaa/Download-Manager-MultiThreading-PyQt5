@@ -53,6 +53,7 @@ class threadClass(QThread):
     #  if I dont create signal there are defult signal ( finish and start )
     #  they called from Qthread counstructor
     #  BUT, IF  I NEED TO UPDATE WITH DATA so i need to create signal !
+
     update_progress = pyqtSignal(int)  # pass type of passed info to it
     work_complete = pyqtSignal(dict)
 
@@ -61,7 +62,7 @@ class threadClass(QThread):
             print(x)
             time.sleep(0.5)
             self.update_progress.emit(x)
-        self.work_complete.emit({"id": 12, "name": "ayat", "ln": "Gamal "})
+        self.work_complete.emit({"id": 12, "fname": "ayat", "ln": "Gamal "})
 
 def main():
     app = QApplication(sys.argv)

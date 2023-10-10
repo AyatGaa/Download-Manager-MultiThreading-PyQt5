@@ -12,7 +12,6 @@ logging.basicConfig(format="%(message)s", level=logging.INFO)
 
 form_class,_ = loadUiType(os.path.join(os.path.dirname(__file__), "threadtest.ui"))
 
-
 class Threads(QMainWindow, form_class):
     def __init__(self, parent=None):
         super(Threads, self).__init__(parent)
@@ -84,7 +83,7 @@ class ThreadClass(QThread):
     def __init__(self, parent= None , index = 0):
         super(ThreadClass, self).__init__(parent)
         self.index = index
-        self.isRunning == True
+        # self.isRunning == True
 
     def run(self):
         logging.info(f"thead number {self.index} start")
